@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "BeautyHer",
+    "slug": "beautyher",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo-512.png",
+    "scheme": "onspaceapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.beautyher.app",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "BeautyHer uses your camera to analyze your skin and features.",
+        "NSPhotoLibraryUsageDescription": "BeautyHer accesses your photos to perform beauty analysis.",
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": ["onspaceapp"]
+          }
+        ]
+      }
+    },
+    "android": {
+      "package": "com.beautyher.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo-512.png",
+        "backgroundColor": "#F8E2DC"
+      },
+      "edgeToEdgeEnabled": true,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "onspaceapp"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/logo-512.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/logo-512.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FDF0EC"
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-apple-authentication",
+        {
+          "usesAppleSignIn": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
